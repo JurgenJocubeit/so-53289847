@@ -16,6 +16,10 @@
     <%= form.text_field :name %>
   </div>
 
+  <%= form.fields_for :profile, user.profile do |profile_fields| %>
+    <%= render "shared/profile", form: profile_fields %>
+  <% end %>
+
   <div class="actions">
     <%= form.submit %>
   </div>

@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_one :profile, as: :profilable
   accepts_nested_attributes_for :profile, allow_destroy: true, reject_if: :all_blank
+  delegate :age, :city, :gender, :license, to: :profile
 
   def all_matching_content
     Content.where(

@@ -6,23 +6,23 @@
 </p>
 
 <p>
-  <strong>Driver license:</strong>
-  <%= @content.driver_license %>
+  <strong>Age:</strong>
+  <%= @content.profile.age %>
 </p>
 
 <p>
   <strong>City:</strong>
-  <%= @content.city %>
+  <%= @content.profile.city %>
 </p>
 
 <p>
   <strong>Gender:</strong>
-  <%= @content.gender %>
+  <%= @content.profile.gender %>
 </p>
 
 <p>
-  <strong>Age:</strong>
-  <%= @content.age %>
+  <strong>License:</strong>
+  <%= @content.profile.license ? "Yes" : "No" %>
 </p>
 
 <%= link_to 'Edit', edit_content_path(@content) %> |

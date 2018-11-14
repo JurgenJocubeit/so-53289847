@@ -16,25 +16,9 @@
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :driver_license %>
-    <%= form.check_box :driver_license %>
-  </div>
-
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city %>
-  </div>
-
-  <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_field :gender %>
-  </div>
-
-  <div class="field">
-    <%= form.label :age %>
-    <%= form.text_field :age %>
-  </div>
+  <%= form.fields_for :profile, content.profile do |profile_fields| %>
+    <%= render "shared/profile", form: profile_fields %>
+  <% end %>
 
   <div class="actions">
     <%= form.submit %>

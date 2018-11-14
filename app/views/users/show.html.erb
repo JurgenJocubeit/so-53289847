@@ -5,5 +5,34 @@
   <%= @user.name %>
 </p>
 
+<p>
+  <strong>Age:</strong>
+  <%= @user.age %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @user.city %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @user.gender %>
+</p>
+
+<p>
+  <strong>License:</strong>
+  <%= @user.license ? "Yes" : "No" %>
+</p>
+
+<p>
+  <strong>Content</strong>
+  <ul>
+    <% @user.any_matching_content.each do |content| %>
+    <li><%= link_to content.title, content %></li>
+    <% end %>
+  </li>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -33,11 +33,18 @@ a {
 }
 
 th {
-  padding-bottom: 5px;
+  background: #444;
+  color: #fff;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
 }
 
 td {
-  padding: 0 5px 7px;
+  padding: 5px 10px;
 }
 
 div {
