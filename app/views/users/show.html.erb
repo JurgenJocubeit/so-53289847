@@ -26,12 +26,21 @@
 </p>
 
 <p>
-  <strong>Content</strong>
+  <strong>Content (any matching filter)</strong>
   <ul>
     <% @user.any_matching_content.each do |content| %>
     <li><%= link_to content.title, content %></li>
     <% end %>
-  </li>
+  </ul>
+</p>
+
+<p>
+  <strong>Content (all matching filters)</strong>
+  <ul>
+    <% @user.all_matching_content.each do |content| %>
+    <li><%= link_to content.title, content %></li>
+    <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

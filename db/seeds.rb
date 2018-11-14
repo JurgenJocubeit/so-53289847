@@ -74,3 +74,13 @@ Content.create!(
     age: 18
   )
 )
+
+Content.create!(
+  title: "John is awarded highest accolade",
+  profile: Profile.create!(
+    age: 18,
+    city: "London",
+    gender: "Male",
+    license: true
+  )
+)
