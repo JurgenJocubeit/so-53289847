@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @content.title %>
+</p>
+
+<p>
+  <strong>Driver license:</strong>
+  <%= @content.driver_license %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @content.city %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @content.gender %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @content.age %>
+</p>
+
+<%= link_to 'Edit', edit_content_path(@content) %> |
+<%= link_to 'Back', contents_path %>
