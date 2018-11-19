@@ -42,7 +42,7 @@ User.create!(
     license: true,
     city: "Berlin",
     gender: "Male",
-    age: 24
+    age: 64
   )
 )
 
@@ -71,7 +71,7 @@ Content.create!(
 Content.create!(
   title: "Adults only expo opens Wednesday",
   profile: Profile.create!(
-    age: 18
+    min_age: 18
   )
 )
 
@@ -82,5 +82,13 @@ Content.create!(
     city: "London",
     gender: "Male",
     license: true
+  )
+)
+
+Content.create!(
+  title: "This content not for Jane or Hans",
+  profile: Profile.create!(
+    min_age: 18,
+    max_age: 55
   )
 )

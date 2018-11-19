@@ -6,8 +6,11 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
       t.string :city, index: true
       t.string :gender, index: true
       t.integer :age, index: true
+      t.integer :min_age, index: true
+      t.integer :max_age, index: true
       t.timestamps
-      t.index [:license, :city, :gender, :age], name: "profile_composite_index"
+      t.index [:license, :city, :gender, :age, :min_age, :max_age],
+        name: "profile_composite_index"
     end
   end
 end

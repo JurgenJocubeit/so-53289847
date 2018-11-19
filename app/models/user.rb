@@ -5,14 +5,14 @@ class User < ApplicationRecord
 
   def all_matching_content
     Content.where(
-      profile: Profile.where("? >= age", age).
+      profile: Profile.where(age: age).
         where(gender: gender, city: city, license: license).
         where(profilable_type: "Content"))
   end
 
   def any_matching_content
     Content.where(
-      profile: Profile.where("? >= age", age).
+      profile: Profile.age_restricted(age).
         or(Profile.where(gender: gender)).
         or(Profile.where(city: city)).
         or(Profile.where(license: license)).

@@ -26,13 +26,17 @@ ActiveRecord::Schema.define(version: 2018_11_14_004307) do
     t.string "city"
     t.string "gender"
     t.integer "age"
+    t.integer "min_age"
+    t.integer "max_age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["age"], name: "index_profiles_on_age"
     t.index ["city"], name: "index_profiles_on_city"
     t.index ["gender"], name: "index_profiles_on_gender"
-    t.index ["license", "city", "gender", "age"], name: "profile_composite_index"
+    t.index ["license", "city", "gender", "age", "min_age", "max_age"], name: "profile_composite_index"
     t.index ["license"], name: "index_profiles_on_license"
+    t.index ["max_age"], name: "index_profiles_on_max_age"
+    t.index ["min_age"], name: "index_profiles_on_min_age"
     t.index ["profilable_type", "profilable_id"], name: "index_profiles_on_profilable_type_and_profilable_id"
   end
 

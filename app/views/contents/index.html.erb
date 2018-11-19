@@ -6,7 +6,9 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Age</th>
+      <th>Min. Age</th>
+      <th>Max. Age</th>
+      <th>Exact Age</th>
       <th>City</th>
       <th>Gender</th>
       <th>License?</th>
@@ -18,10 +20,12 @@
     <% @contents.each do |content| %>
       <tr>
         <td><%= content.title %></td>
-        <td><%= content.profile.age %></td>
+        <td align="middle"><%= content.profile.min_age %></td>
+        <td align="middle"><%= content.profile.max_age %></td>
+        <td align="middle"><%= content.profile.age %></td>
         <td><%= content.profile.city %></td>
         <td><%= content.profile.gender %></td>
-        <td><%= content.profile.license ? "Yes" : "No" %></td>
+        <td align="middle"><%= content.profile.license ? "Yes" : "No" %></td>
         <td><%= link_to 'Show', content %></td>
         <td><%= link_to 'Edit', edit_content_path(content) %></td>
         <td><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>

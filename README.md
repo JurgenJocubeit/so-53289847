@@ -23,3 +23,9 @@ You can then switch into a rails console to query the database:
 > john.any_matching_content.map(&:title)
 => ["London introduces new tax", "New license requirements in Berlin", "Adults only expo opens Wednesday"]
 ```
+
+## Rebuild the database
+
+```
+rails db:environment:set RAILS_ENV=development && rails db:drop && rails db:create && rails db:migrate && rails db:seed
+```

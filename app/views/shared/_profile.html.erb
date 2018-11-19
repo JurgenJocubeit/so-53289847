@@ -1,7 +1,24 @@
-<div class="field">
-  <%= form.label :age %>
-  <%= form.number_field :age %>
-</div>
+<% if show_age_range %>
+  <div class="field">
+    <%= form.label :min_age, "Minimum Age" %>
+    <%= form.number_field :min_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_age, "Maximum Age" %>
+    <%= form.number_field :max_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age, "Exact Age" %>
+    <%= form.number_field :age %>
+  </div>
+<% else %>
+  <div class="field">
+    <%= form.label :age, "Age" %>
+    <%= form.number_field :age %>
+  </div>
+<% end %>
 
 <div class="field">
   <%= form.label :city %>

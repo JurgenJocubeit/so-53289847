@@ -17,7 +17,7 @@
   </div>
 
   <%= form.fields_for :profile, content.profile do |profile_fields| %>
-    <%= render "shared/profile", form: profile_fields %>
+    <%= render "shared/profile", form: profile_fields, show_age_range: true %>
   <% end %>
 
   <div class="actions">
